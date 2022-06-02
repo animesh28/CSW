@@ -4,23 +4,35 @@ import java.util.*;
 Explain its time complexity.*/
 
 public class Q5 {
-public static void main(String[] args) {
-		// TODO Auto-generated method stub
-Scanner sc=new Scanner (System.in);
-		
-int [] arr= {22,32,11,54,67,89};
-int k=sc.nextInt();
-while( k!=0) {
-	int key=arr[0];
-	for(int i=0;i<arr.length-1;i++) {
-		arr[i]=arr[i+1];
-	arr[i+1]=key;	
-	}
-	/*arr[arr.length-1]=key;*/
-	k--;
- }
-for(int e: arr)
-	System.out.print(e+" ");
-	}
+static void RightRotate(int a[],
+                        int n, int k)
+{
+    k=k%n;
+ 
+    for(int i = 0; i < n; i++)
+    {
+        if(i<k)
+        {
+            System.out.print(a[n + i - k]
+                             + " ");
+        }
+        else
+        {
+            System.out.print(a[i - k]
+                             + " ");
+        }
+    }
+    System.out.println();
+}
+     
+public static void main(String args[])
+{
+    int Array[] = {1, 2, 3, 4, 5};
+    int N = Array.length;
+ 
+    int K = 2;
+    RightRotate(Array, N, K);
+ 
+}
 
 }
