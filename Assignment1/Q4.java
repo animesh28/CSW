@@ -2,7 +2,7 @@
 public class Q4 {
 	static int Search(int ar[],int l,int r,int x) {
 		if(r>=l) {
-			 int mid=(l+r);
+			 int mid=l+(r-l)/2;
 		if(ar[mid]==x)
 			return mid;
 		if(ar[mid]>x)
